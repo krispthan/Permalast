@@ -1,0 +1,32 @@
+
+
+.contact-icon-wrapper{
+
+
+        .contact-icon-container{
+            display:flex;
+            justify-content: space-between;
+            color:$image-border;
+            font-size:1.5rem;
+            @extend %text-style;
+            padding: 15px;
+          
+            background-color:$contact-icon-col-bkg-color;
+        }
+}
+
+.contact-icon-container a{
+    color:$image-border;
+}
+
+a:first-of-type{
+    margin-left: 25px;
+}
+
+a:last-of-type{
+    margin-right: 30px;
+}
+a .fas{
+    padding-right:15px;
+    font-size:2rem;
+}

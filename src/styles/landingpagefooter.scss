@@ -1,0 +1,81 @@
+@import './variables';
+
+.footer-wrapper{
+    background:$landingpage-footer-bkg-color;
+        .protect-header{
+            text-align:center;
+            margin: 3px 0 3px 0;
+                h3{
+                    font-size:1.5rem;
+                    padding-top:10px;
+                    @extend %font-transform-color;
+                }
+        }
+        .progress-bar-savings{
+                row{
+                    .figure-container{
+                        .progress-bar-image-container{
+                            display:flex;
+                        
+                    }
+                }
+        }
+   
+    }
+}
+
+.img-border{
+    background:$image-border;
+    border-radius:50%;
+}
+
+.savings-info-container h4{
+    font-family: $font-lato;
+}
+
+
+
+.progress-bar-img-container{
+    display:flex;
+    justify-content: center;
+        .progress-bar{
+            justify-content: space-between;
+            background: #dde4de;
+            width: 46px;
+            border-radius: 20%;
+            height: 10px;
+            margin-right: 19px;
+        }
+        .dark-progress{
+            background:$font-color;
+            width: 46px;
+            border-radius: 20%;
+            height: 10px;
+            margin-right: 19px;
+            justify-content: space-between;
+        }
+    
+}
+
+
+.savings-info-container{
+        .img-border{
+            background: #dde4de;
+            border-radius: 50%;
+            width: 149px;
+            height: 147px;
+            margin: 11px 138px;
+            position:relative;
+                .savings-img{
+                    z-index:3;
+                    position:relative;
+                }
+        }
+}
+
+.savings-info-container .savings-subheader{
+   margin: 0px 0px 19px 60px;
+}
+
+
+

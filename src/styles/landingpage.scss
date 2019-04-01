@@ -1,0 +1,67 @@
+@import './variables';
+
+
+
+.landingpage-filter{
+    @extend %filter;
+    z-index:-1;
+    opacity:0.5;
+}
+.landingpage-wrapper{
+    min-height: 90vh;
+    max-height: 900px;
+    height: 90vh;
+    position:relative;
+    .landingpage-container{
+        position:relative;
+        width:100%;
+        height:100%;
+        background-image: url('./../assets/images/houses.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        overflow:hidden;
+            .nav-text-container{
+                    display: flex;
+                    flex-direction: column;
+                    align-items:center;
+                    .nav-text{
+                    vertical-align: middle;
+                    display:inline-block;
+                    
+                ul{
+                    text-align:center;
+                    display:flex;
+                    justify-content:space-evenly;
+                    li{
+                     @extend %font-transform-color;
+                        font-size:2rem;
+                        list-style-type:none;  
+                        font-weight:400px; 
+                        padding: 0 25px 0 0px;
+                    }
+                }
+            }
+            hr{
+                font-weight:500px;
+                height:3px;
+                color:$font-color;
+            }
+            .permalast-title{
+                @extend %font-transform-color;
+                font-family:headerFont;
+                h1{
+                    font-size:5rem;
+                }
+            }
+            .permalast-subheader{
+                @extend %font-transform-color;
+            }
+        }
+    }
+}
+
+
+.permalast-title span{
+    font-size:7rem;
+}
