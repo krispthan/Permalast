@@ -34,12 +34,29 @@ hr{
 .contact-icon-container{
     display:flex;
     position:relative;
-    justify-content:center;
+   
 }
 
-.container-icon-container img{
-    width:100px;
-    height:100px;   
+.contact-img-icon-container{
+    vertical-align: middle;
+    filter: invert(100%);
+    vertical-align: middle;
+    border-style: none;
+  
+}
+.contact-img-icon-container img{
+   @media only screen and (max-width:$phablet-size){
+    margin: 0 23px 0 49px;
+   }
+   @media only screen and (max-width:$laptop-size){
+    margin:0 20px 0 40px;
+    width: 50px;
+    height:50px;
+   }
+}
+
+.contact-img-icon-container img:last-of-type{
+    margin: 0 40px 0 84px;
 }
 
 .contact-us-display{
@@ -163,8 +180,6 @@ button, select {
             }
     }
        
-
-
 
 
 
