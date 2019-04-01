@@ -76,12 +76,16 @@ hr{
             text-align:center;
             margin:40px 0;
             padding: 0 40px;
+           
                 h3{
                     font-size: 3rem;
                     font-weight:600;
                     text-transform: uppercase;
                     letter-spacing: 1;
                     color:$image-border;
+                    @media only screen and (max-width: $phablet-size){
+                        font-size:2rem;
+                    }
                 }
     }
         #contact-form{
@@ -141,13 +145,20 @@ button, select {
                     h4{
                         @extend %text-style;
                         font-size:1.5rem;
-                    
+                        @media only screen and (max-width: $phablet-size){
+                            font-size:1rem;
+                            
+                        }
                     }
         }
             .contact-display-container{
                     h2{
                         @extend %text-style;
                         font-size:4rem;
+                        @media only screen and (max-width: $phablet-size){
+                            font-size:2rem;
+                       
+                        }
                     }
             }
     }
@@ -174,3 +185,4 @@ button, select {
     opacity: .9;
     background-image: url('../assets//images//contact_bkg.png');
 }
+
