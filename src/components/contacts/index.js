@@ -8,6 +8,7 @@ import facebook from '../../assets/images/facebook.png';
 import map from '../../assets/images/map.png';
 import contactbkg from '../../assets/images/contact_bkg.png'
 
+
 const required = value => value ? undefined : 'Field is Required';
 
 class Contact extends React.Component{
@@ -33,10 +34,16 @@ class Contact extends React.Component{
                     <div className="contact-us-left-filter"></div>
                     <div className="contact-info-wrapper">
                             <div className="row">
-                                <div className="contact-icon-container">
-                                    <img src="../../assets/images/youtube.png" alt=""/> 
-                                    <img src="../../assets/images/facebook.png" alt=""/>
-                                    <img src="" alt=""/>
+                                <div className="contact-icon-container d-flex justify-container-space-around">
+                                    <div className="col-lg-4   contact-img-icon-container">
+                                        <img src={ facebook } alt=""/> 
+                                    </div>
+                                    <div className="col-lg-4 contact-img-icon-container">
+                                        <img src={ youtube } alt=""/>
+                                    </div>
+                                    <div className="col-lg-4  contact-img-icon-container">
+                                    <img src={ youtube } alt=""/>
+                                    </div>
                                 </div>
                             </div>
                         <hr/>
