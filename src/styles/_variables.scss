@@ -4,9 +4,14 @@ $landingpage-footer-bkg-color:#bfbfb8;
 $font-lato: 'Lato', sans-serif;
 $contact-icon-col-bkg-color:#363c62;
 $contact-form-col-bkg-color:#232345;
+$quote-bkg-color:#322b2e;
+$quote-bkg-signup-footer-color:#201f30;
+$aboutus-button-bkg-color:#28325e;
+$aboutus-text-color:#b9bfc1;
 $form-input-bkg-color:#dde4de;
 $form-text-input-color:#7f8981;
 $contact-map-filter:#201f30;
+$aboutus-wrapper-bkg-color:#302c39;
 
 
 
@@ -22,6 +27,8 @@ $phone-size:350px;
 %font-transform-color{
     text-transform:uppercase;
     color:#201f30;
+    font-size:1rem;
+    
 }
 
 %filter{
@@ -41,6 +48,12 @@ $phone-size:350px;
     left: 0;
     background:$contact-icon-col-bkg-color;
     
+}
+%wrapper{
+    min-height:90vh;
+    max-height:900px;
+    height:90vh;
+    position:relative;    
 }
 %text-style{
     text-transform: uppercase;
