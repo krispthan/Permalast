@@ -14,3 +14,20 @@ export const sendContactForm = values => {
    })
   }
 }
+
+
+
+export const sendSignupForm = values => {
+  const { firstName, lastName, email } = values;
+
+  return async dispatch => {
+    const response = await axios.post('/api/signupform.php',{
+      firstName, lastName, email
+    })
+    
+    dispatch({
+      type: 'SEND_SIGNUP_FORM',
+      payload:response
+    })
+  }
+}
