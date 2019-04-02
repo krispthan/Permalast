@@ -1,5 +1,8 @@
 import React from 'react';
-
+import warranty from '../../assets/images/warranty-icon.png';
+import recycle from '../../assets/images/Recycly-icon.png';
+import piggybank from '../../assets/images/piggy-bank-icon.png';
+import checkmark from '../../assets/images/guarantee-check-mark-icon.png';
 
 class LandingpageFooter extends React.Component {
     render(){
@@ -22,7 +25,7 @@ class LandingpageFooter extends React.Component {
                             <div className="row flex-row justify-content-space-between">
                             <div className="col-sm-6 col-md-6 savings-info-container">
                                 <div className="img-border">
-                                  <img className="savings-img" src="../../assets/images/warranty-icon.png" alt=""/>
+                                  <img id="first-img-icon"className="savings-img" src={ warranty } alt=""/>
                                 </div>
                             </div>
                                 <div className="col-sm-6 col-md-6 savings-info-container">
@@ -45,7 +48,7 @@ class LandingpageFooter extends React.Component {
                             <div className="row flex-row justify-content-space-between">
                             <div className="col-sm-6 savings-info-container">
                                 <div className="img-border">
-                                  <img className="savings-img" src="../../assets/images/guarantee-check-mark-icon.png" alt=""/>
+                                  <img className="savings-img" src={ recycle } alt=""/>
                                 </div>
                             </div>
                                 <div className="col-sm-6 savings-info-container">
@@ -68,7 +71,7 @@ class LandingpageFooter extends React.Component {
                             <div className="row flex-row justify-content-space-between">
                             <div className="col-sm-6 savings-info-container">
                                 <div className="img-border">
-                                  <img className="savings-img" src="../../assets/images/guarantee-check-mark-icon.png" alt=""/>
+                                  <img className="savings-img" src={ piggybank } alt=""/>
                                 </div>
                             </div>
                                 <div className="col-sm-6 savings-info-container">
@@ -91,7 +94,7 @@ class LandingpageFooter extends React.Component {
                             <div className="row flex-row justify-content-space-between">
                             <div className="col-sm-6 savings-info-container">
                                 <div className="img-border">
-                                  <img className="savings-img" src="../../assets/images/guarantee-check-mark-icon.png" alt=""/>
+                                  <img className="savings-img" src={ checkmark} alt=""/>
                                 </div>
                             </div>
                                 <div className="col-sm-6 savings-info-container">

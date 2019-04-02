@@ -112,10 +112,36 @@ figure{
                 .savings-img{
                     z-index:3;
                     position:relative;
+                    width:100px;
+                    margin: 24px 3px 11px 23px;
+                    @media only screen and (max-width:1500px){
+                        margin: 14px 12px 15px 13px;
+                        width: 90px;
+                     }
+                    @media only screen and (max-width:$laptop-size){
+                        width: 71px;
+                        margin: 25px 10px 15px 23px;
+                    }
+                    @media only screen and (max-width:$phablet-size){
+                        margin: 13px 12px 15px 18px;
+                        width: 75px;
+                    }
                 }
         }
 }
 
+ #first-img-icon{
+    width: 63px;
+    margin: 11px 15px 31px 28px;
+    @media only screen and (max-width:$laptop-size){
+        width:60px;
+        margin: 14px 3px 16px 32px;
+    }
+    @media only screen and (max-width:$phablet-size){
+        width: 50px;
+        margin: 8px 10px 27px 35px;
+    }
+}
 .savings-info-container .savings-subheader{
     margin: 0px 0px 22px 62px;
     @media only screen and (max-width:1500px){
