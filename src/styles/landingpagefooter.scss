@@ -9,30 +9,52 @@
                     font-size:1.5rem;
                     padding-top:10px;
                     @extend %font-transform-color;
+                    @media only screen and (max-width:phablet-size){
+                       font-size:1rem;
+                   } 
                 }
         }
         .progress-bar-savings{
                 row{
                     .figure-container{
                         .progress-bar-image-container{
-                            display:flex;
-                        
-                    }
-                }
-        }
+                            display:flex;    
+                           }
+                         }
+                   }
    
-    }
+        }
 }
 
-.img-border{
+.progress-save-container{
+    padding-right: 15px; 
+    padding-left: 15px;
+    @media only screen and (max-width: $phablet-size){
+        padding-left:15px;
+    }
+}
+.savings-info-container .img-border{
     background:$image-border;
     border-radius:50%;
+
+}
+.img-border{
+    width:149px;
+    height:147px;
+    margin: 0 1px 0 59px;
+
+
 }
 
 .savings-info-container h4{
     font-family: $font-lato;
 }
 
+figure{
+    @media only screen and (max-width:$phablet-size){
+        margin: 0.5rem;
+    }
+}
 
 
 .progress-bar-img-container{
@@ -45,15 +67,21 @@
             border-radius: 20%;
             height: 10px;
             margin-right: 19px;
+            &.dark-progress{
+                background:$font-color;
+            }
+            @media only screen and (max-width:$phablet-size){
+                width:37px;
+            }
         }
-        .dark-progress{
-            background:$font-color;
-            width: 46px;
-            border-radius: 20%;
-            height: 10px;
-            margin-right: 19px;
-            justify-content: space-between;
-        }
+        // .dark-progress{
+         
+        //     width: 46px;
+        //     border-radius: 20%;
+        //     height: 10px;
+        //     margin-right: 19px;
+        //     justify-content: space-between;
+        // }
     
 }
 
@@ -64,8 +92,23 @@
             border-radius: 50%;
             width: 149px;
             height: 147px;
-            margin: 11px 138px;
+            margin: 0 1px 0 59px;
             position:relative;
+            @media only screen and (max-width:1500px){
+                width: 115px;
+                height: 115px;
+                margin: 8px 16px;
+               }
+            @media only screen and (max-width:$laptop-size){
+                width: 115px;
+                height: 115px;
+                margin: 8px 10px;
+               }
+            @media only screen and (max-width:$phablet-size){
+                width: 110px;
+                height: 93px;
+                margin: 7px 62px;   
+               }
                 .savings-img{
                     z-index:3;
                     position:relative;
@@ -74,8 +117,27 @@
 }
 
 .savings-info-container .savings-subheader{
-   margin: 0px 0px 19px 60px;
+    margin: 0px 0px 22px 62px;
+    @media only screen and (max-width:1500px){
+            margin: 0px 0px 22px 0px;
+        }
+    @media only screen and (max-width:$laptop-size){
+        margin: 5px 0px 10px 0px;
+    }
+    @media only screen and (max-width:$phablet-size){
+        margin: 5px 0px 10px 75px;
+
+    }
 }
 
-
+.savings-subheader h3{
+    font-size:1.75rem;
+    @media only screen and (max-width:1500px){
+        font-size:1.5rem;   
+       }
+    @media only screen and (max-width:$phablet-size){
+        font-size:1rem;   
+       }
+      
+}
 

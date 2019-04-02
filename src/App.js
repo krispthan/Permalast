@@ -4,8 +4,8 @@ import React, { Component } from 'react';
 import './styles/styles.scss';
 import Navbar from './components/nav/index';
 // import Landingpage from './components/landingpage/index';
-// import LandingpageFooter from './components/landingpage_footer/index';
-import Contact from './components/contacts/index';
+import LandingpageFooter from './components/landingpage_footer/index';
+// import Contact from './components/contacts/index';
 // import Footer from './components/footer/index';
 import Preloader from './components/preloader/index';
 class App extends Component {
@@ -21,7 +21,7 @@ class App extends Component {
         <header className="App-header">
         <Preloader/>
         <Navbar/>
-        {/* <LandingpageFooter/> */}
+        <LandingpageFooter/>
         {/* <Landingpage/> */}
         </header>
         {/* <Contact/> */}
