@@ -1,23 +1,28 @@
 @import './variables.scss';
 
 .navbar-container{
-    position:absolute;
-    display:inline-block;
+    position:relative;
+    display: inline-block;
+    margin-left:20px;
     .container{
-        float:left;
         .navbar-header{
-        
-        }
-        .navbar-btn{
-
+            .icon-bar{
+                width:35px;
+                height:5px;
+                background-color:black;
+                margin: 6px 0;
+            }
         }
     }
 }
 
 .navbrand-container{
-    #navbrand-image{
-        height:200px;
-        width:200px;
-        padding-left: 3px;
-    }
+    display: inline-flex;
+    margin-top:29px;
+        #navbrand-image{
+            margin:-19px 5px;
+            }
 }
+
+
+

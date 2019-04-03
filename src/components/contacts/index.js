@@ -4,9 +4,11 @@ import Input  from '../helpers/input';
 import { sendContactForm } from '../actions/index';
 import { connect } from 'react-redux';
 import youtube from '../../assets/images/youtube.png';
+import twitter from '../../assets/images/twitter.png';
 import facebook from '../../assets/images/facebook.png';
 import map from '../../assets/images/map.png';
 import contactbkg from '../../assets/images/contact_bkg.png'
+import Footer from '../footer/index';
 
 
 const required = value => value ? undefined : 'Field is Required';
@@ -36,10 +38,10 @@ class Contact extends React.Component{
                             <div className="row">
                                 <div className="contact-icon-container d-flex justify-container-space-around">
                                     <div className="col-lg-4   contact-img-icon-container">
-                                        <img src={ facebook } alt=""/> 
+                                        <img src={ twitter } alt=""/> 
                                     </div>
                                     <div className="col-lg-4 contact-img-icon-container">
-                                        <img src={ youtube } alt=""/>
+                                        <img src={ facebook } alt=""/>
                                     </div>
                                     <div className="col-lg-4  contact-img-icon-container">
                                     <img src={ youtube } alt=""/>
@@ -129,7 +131,9 @@ class Contact extends React.Component{
                             </div>
                         </div>
                 </div>
+                <Footer/>
         </div>
+      
         )
     }
 }

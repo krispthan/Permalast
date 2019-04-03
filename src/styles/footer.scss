@@ -11,6 +11,9 @@
             @extend %text-style;
             padding: 15px;
             background-color:$contact-icon-col-bkg-color;
+            @media only screen and (max-width:$phablet-size){
+                font-size:1rem;
+            }
         }
 }
 
@@ -20,6 +23,10 @@
 
 a:first-of-type{
     margin-left: 25px;
+    @media only screen and (max-width:$phablet-size){
+        font-size:0.8rem;
+        margin-left:13px;
+    }
 }
 
 a:last-of-type{
@@ -28,4 +35,9 @@ a:last-of-type{
 a .fas{
     padding-right:15px;
     font-size:2rem;
+    @media only screen and (max-width:$phablet-size){
+        font-size:1rem;
+        display:flex;
+        flex-direction:column;
+    }
 }

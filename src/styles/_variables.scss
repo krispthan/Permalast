@@ -27,7 +27,7 @@ $phone-size:350px;
 %font-transform-color{
     text-transform:uppercase;
     color:#201f30;
-    font-size:1rem;
+    font-size:2.5rem;
     
 }
 
@@ -62,8 +62,18 @@ $phone-size:350px;
     font-family:$font-lato;
 }
 
-
+%headpage-wrapper{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    overflow:hidden;
+    position:relative;
+    width:100%;
+    height:100%;
+}
 @font-face{
     font-family:headerFont;
     src: url('../assets/fonts/boston.ttf');
 }
+
+

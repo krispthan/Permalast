@@ -66,7 +66,7 @@
 
  .signup-container{
     display: flex;
-    margin: 0 auto;
+    margin-right:0 auto;
     justify-content: space-around;
 }
 
@@ -94,14 +94,14 @@
                 width: 300px;
                 padding: 12px;
                 border-radius: 8%;
-                margin: 0 163px 20px 34px;
+                margin: 0 163px 0px 33px;
         }
         input[type=email]{
             background-color:$image-border;
             width: 300px;
             padding: 12px;
             border-radius: 8%;
-            margin: 0 124px 20px 0px;
+            margin: 0 94px 20px 0px;
         }
       
         button{
@@ -109,7 +109,7 @@
             color:$image-border;
             margin-left: 150px;
             width: 138px;
-            height: 68px;
+            height: 48px;
             font-size:1.5rem;
             font-weight:600;
             margin-left: -76px;
