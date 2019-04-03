@@ -1,60 +1,52 @@
-import React from 'react';
-// import { Link, Redirect } from 'react-router-dom';
+import React, {Fragment} from 'react';
+import { Link } from 'react-router-dom';
+import LandingpageFooter from './../landingpage_footer/index';
 class Landingpage extends React.Component{
-        state={
-            navlinks:[
-                {
-                    text:'Home',
-                    to:'/'
-                },
-                {
-                    text:'About',
-                    to:'/about'
-                },
-                {
-                    text:'Testimony',
-                    to:'/testimony'
-                },
-                {
-                    text:'Blog',
-                    to:'/blog'
-                },
-                {
-                    text:'Gallery',
-                    to:'/gallery'
-                },
-                {
-                    text:'Contact',
-                    to:'/contact'  
-                }
-            ]
-        }
+    renderLinks(){
+        return (
+            <Fragment>
+                <ul>
+                    <li>
+                        <Link to="/">Home</Link>
+                    </li>
+                    <li>
+                        <Link to="aboutus">About Us</Link>
+                    </li>
+                    {/* <li>
+                        <Link to="testimony">Testimony</Link>
+                    </li>
+                    <li>
+                        <Link to="blog">Blog</Link>
+                    </li>
+                    <li>
+                        <Link to="gallery">Gallery</Link>
+                    </li> */}
+                    <li>
+                        <Link to="contact">Contact</Link>
+                    </li>
+                </ul>
+            </Fragment>
+        )
+    } 
 
-        // buildLink =(link) => {
-        //     return (
-        //         <Link to = {link.to } key={ link.to } >
-        //             <li>    
-        //                 { link.text }
-        //             </li>
-        //       </Link>
-        //     )
-        // }
-    
+      
     render(){
+        // const links = this.renderLinks();
         return(
             <div className="landingpage-wrapper">
                  <div className="landingpage-container">
                     <div className="landingpage-filter"></div>
                         <header className="nav-text-container">
                             <div className="nav-text">
-                            <ul>
-                                <li>Home</li>
-                                <li>About</li>
-                                <li>Testimony</li>
-                                <li>Blog</li>
-                                <li>Gallery</li>
-                                <li>Contact</li>
-                            </ul>
+                                <ul>
+                                    <li>Home</li>
+                                    <li>About</li>
+                                    <li>Testimonials</li>
+                                    <li>Blog</li>
+                                    <li>Gallery</li>
+                                    <li>Contact</li>
+                                </ul>
+                                {/* { links } */}
                           </div>
                   <hr/>
                   <div className="permalast-title">
@@ -66,6 +58,7 @@ class Landingpage extends React.Component{
                   </div>
                 </header>
             </div>
+            <LandingpageFooter/>
         </div>
           )
        }   

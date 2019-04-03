@@ -1,5 +1,6 @@
 import React from 'react';
 import {  NavbarBrand } from 'reactstrap';
+import Permalast from '../../assets/images/navbrand.png';
 
 class Navbar extends React.Component {
     constructor(props){
@@ -22,18 +23,15 @@ class Navbar extends React.Component {
                 <nav className="navbar-container">
                     <div className="container">
                         <div className="navbar-header">
-                        <button type="button" className="navbar-toggle collapsed navbar-btn" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                            <span className="sr-only">Toggle navigation</span>
-                            <span className="icon-bar"></span>
-                            <span className="icon-bar"></span>
-                            <span className="icon-bar"></span>
-                        </button>
+                            <div className="icon-bar"></div>
+                            <div className="icon-bar"></div>
+                            <div className="icon-bar"></div>
                         </div>
                     </div>
                 </nav>
-                <NavbarBrand href="/" className="navbrand-container">
-                            <img  id="navbrand-image" src="../../assets/images/navbrand.png" alt=""/>
-                </NavbarBrand>
+                <div className="navbrand-container">
+                    <img  id="navbrand-image" src={ Permalast } alt=""/>
+                </div>
             </div>
         )
     }
