@@ -1,0 +1,28 @@
+@import './variables';
+
+.Navbar-menu-wrapper{
+    .navbrand-icon-container{
+        display: inline-flex;
+        margin-top: 0px;
+      
+            #navbrand-icon{
+                filter: invert(100%);
+            }
+    }
+    
+    .main-link-navbar{
+        display:flex;
+        list-style-type: none;
+        margin-left: auto;
+        font-size: 1.2rem;
+    }      
+}
+
+a {
+    color: whitesmoke;
+    text-decoration: none;
+    background-color: transparent;
+}
+a:hover{
+    color:antiquewhite;
+}

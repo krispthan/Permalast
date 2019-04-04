@@ -1,11 +1,13 @@
 import React, { Component } from "react";
 import "./styles/styles.scss";
-import Navbar from "./components/nav/index";
+import HamburgerMenu from "./components/nav/index";
 import Landingpage from "./components/landingpage/index";
 import Contact from "./components/contacts/index";
 import Preloader from "./components/preloader/index";
 import Aboutus from "./components/aboutus/index";
 import LandingpageFooter from './components/landingpage_footer/index';
+import NavMenu from "./components/nav/main";
+
 // import {BrowserRouter, Route, Switch } from "react-router-dom";
 
 class App extends Component {
@@ -19,19 +21,21 @@ class App extends Component {
     return (
       <div>
         <Preloader/>
-        <Navbar/>
+        <HamburgerMenu/>
         <Landingpage/>
-        <LandingpageFooter/>
         <Aboutus/>
         <Contact/>
-        {/* <BrowserRouter>
+        {/* <NavMenu/> */}
+{/*          
+         <BrowserRouter>
           <Switch>
             <Route exact path="/" component = { Landingpage }/>
-            <Route path="aboutus" component = { Aboutus }/>
-            <Route path="contacts" component = { Contact}/>
+            <Route path="/" component = {LandingpageFooter}/>
+            <Route path="/" component = { Aboutus }/>
+            <Route path="/" component = { Contact}/>
           </Switch>
-        </BrowserRouter>
-     */}
+        </BrowserRouter> */}
+
           
       </div>
     );
