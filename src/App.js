@@ -5,6 +5,7 @@ import Landingpage from "./components/landingpage/index";
 import Contact from "./components/contacts/index";
 import Preloader from "./components/preloader/index";
 import Aboutus from "./components/aboutus/index";
+import LandingpageFooter from './components/landingpage_footer/index';
 // import {BrowserRouter, Route, Switch } from "react-router-dom";
 
 class App extends Component {
@@ -20,6 +21,7 @@ class App extends Component {
         <Preloader/>
         <Navbar/>
         <Landingpage/>
+        <LandingpageFooter/>
         <Aboutus/>
         <Contact/>
         {/* <BrowserRouter>
