@@ -1,8 +1,7 @@
 import React from 'react';
-import {  NavbarBrand } from 'reactstrap';
 import Permalast from '../../assets/images/navbrand.png';
 
-class Navbar extends React.Component {
+class  HamburgerMenu extends React.Component {
     constructor(props){
         super(props);
         
@@ -37,4 +36,4 @@ class Navbar extends React.Component {
     }
 }
 
-export default Navbar;
+export default HamburgerMenu;

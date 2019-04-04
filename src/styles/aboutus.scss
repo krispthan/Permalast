@@ -72,6 +72,10 @@
     margin-right:0 auto;
     justify-content: space-around;
     padding: 20px 0 0px 0;
+    @media only screen and (max-width:$phablet-size){
+    flex-direction: column;
+    padding: 16px 0 0px 0;
+    }
 }
 
 .aboutus-wrapper{
@@ -92,6 +96,10 @@
     .form{
         display:inline-flex;
         margin: 0 auto;
+        @media only screen and (max-width:$phablet-size){
+            flex-direction: column;
+            display:flex;
+        }
             input{
                 background-color:$image-border;
                 width: 300px;
@@ -101,6 +109,7 @@
                 @media only screen and (max-width:$phablet-size){
                     width: 281px;
                     padding: 6px;
+                    margin: 0 36px 0px 41px;
                 }
         }
         input[type=email]{
@@ -110,8 +119,7 @@
             border-radius: 8%;
             margin: 0 64px 20px 0px;
             @media only screen and (max-width:$phablet-size){
-                width: 281px;
-                padding: 6px;
+                margin: 0px 64px 20px 33px;
             }
         }
       
@@ -125,6 +133,9 @@
             @media only screen and (max-width:$phablet-size){
                 font-size:1rem;
                 width:100px;
+                margin-left:auto;
+                height:40px;
+            
             }
         }
     }
