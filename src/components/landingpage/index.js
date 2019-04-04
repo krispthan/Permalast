@@ -1,6 +1,6 @@
 import React, {Fragment} from 'react';
 import { Link } from 'react-router-dom';
-import LandingpageFooter from './../landingpage_footer/index';
+
 class Landingpage extends React.Component{
     renderLinks(){
         return (
@@ -58,7 +58,7 @@ class Landingpage extends React.Component{
                   </div>
                 </header>
             </div>
-            <LandingpageFooter/>
+           
         </div>
           )
        }   

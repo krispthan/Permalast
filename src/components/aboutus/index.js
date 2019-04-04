@@ -36,7 +36,7 @@ class Signup extends React.Component {
                 </blockquote>
             </div>
             <footer>
-                <div className="footer-wrapper" id="footer-container">
+                <div className="aboutus-wrapper" id="footer-container">
                          <div className="signup-container">
                     <div className="signup-text">
                         <h6>Sign up for Free Consultation</h6>

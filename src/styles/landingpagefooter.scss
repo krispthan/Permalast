@@ -1,6 +1,7 @@
 @import './variables';
 
 .footer-wrapper{
+    padding: 20px;
     background:$landingpage-footer-bkg-color;
         .protect-header{
             text-align:center;
@@ -39,9 +40,10 @@
 
 }
 .img-border{
-    width:149px;
-    height:147px;
-    margin: 0 1px 0 59px;
+    width: 150px;
+    height: 150px;
+    margin: 0px 1px 0 59px;
+    text-align:center;
 
 
 }
@@ -101,40 +103,46 @@ figure{
                 margin: 7px 62px;   
                }
                 .savings-img{
-                    z-index:3;
-                    position:relative;
-                    width:100px;
-                    margin: 24px 3px 11px 23px;
+                    z-index: 3;
+                    height: 70%;
+                    position: relative;
+                    top: 15%;
                     @media only screen and (max-width:1500px){
-                        margin: 14px 12px 15px 13px;
+                        margin:0;
+                        text-align:center;
                         width: 90px;
                      }
                     @media only screen and (max-width:$laptop-size){
                         width: 71px;
-                        margin: 25px 10px 15px 23px;
+                        margin:0;
+                        text-align:center;
                     }
                     @media only screen and (max-width:$phablet-size){
-                        margin: 13px 12px 15px 18px;
-                        width: 75px;
+                       margin: 0px;
+                       text-align:center;
+                       width: 75px;
                     }
                 }
         }
 }
 
  #first-img-icon{
-    width: 63px;
-    margin: 11px 15px 31px 28px;
+    text-align: center;
+    object-fit: contain;
+    object-position: center center;
     @media only screen and (max-width:$laptop-size){
-        width:60px;
-        margin: 14px 3px 16px 32px;
-    }
-    @media only screen and (max-width:$phablet-size){
-        width: 50px;
-        margin: 8px 10px 27px 35px;
-    }
+       width:60px;
+       text-align:center;
+       margin:0px;
 }
+@media only screen and (max-width:$phablet-size){
+    width: 50px;
+    text-align:center;
+    margin:0px;
+    }
+ }  
 .savings-info-container .savings-subheader{
-    margin: 0px 0px 22px 62px;
+    margin-left:-13px;
     @media only screen and (max-width:1500px){
             margin: 0px 0px 22px 0px;
         }
@@ -143,7 +151,6 @@ figure{
     }
     @media only screen and (max-width:$phablet-size){
         margin: 5px 0px 10px 75px;
-
     }
 }
 
@@ -154,7 +161,6 @@ figure{
        }
     @media only screen and (max-width:$phablet-size){
         font-size:1rem;   
-       }
-      
+       } 
 }
 
