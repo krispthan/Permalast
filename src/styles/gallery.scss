@@ -1,0 +1,25 @@
+@import './variables';
+
+.gallery-page-wrapper{
+   background-color: $contact-map-filter;
+    .gallery-wrapper{
+        text-align: center;
+        h1{
+            padding:30px 0px;
+            font-family:headerFont;
+            font-size:4rem;
+            filter:invert(100%);
+        }
+    .gallery-container{
+         background-color:$aboutus-button-bkg-color;
+         }
+    }
+}
+
+         
+.image-container{
+     .gallery-photos{
+        padding: 30px;      
+      }
+ } 
+ 

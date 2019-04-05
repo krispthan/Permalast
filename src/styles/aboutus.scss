@@ -1,0 +1,152 @@
+@import './variables';
+
+.aboutus-wrapper{
+    
+    .aboutus-filter{
+        @extend %filter;
+        opacity: 0.9;
+        position:absolute;
+    }
+    .aboutus-container{
+        position:relative;
+        width:100%;
+        height:100%;
+        background-image:url('../../src/assets/images/aboutus.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        overflow:hidden;
+            .aboutus-info-wrapper{
+                display:flex;
+                align-content: center;
+                flex-direction: column;
+                background-color:$aboutus-wrapper-bkg-color;
+                opacity:.9;
+                position:relative;
+                margin:82px 27% 75px 25%;
+               
+                    .aboutus-header{
+                        text-align:center;
+                        padding: 25px 0;
+                            h2{
+                                font-family:headerFont;
+                                color:$image-border;
+                                font-size:3.5rem;
+                            }
+                    }
+             .aboutus-info-container{
+                 display:flex;
+                 align-content: center;
+                 flex-direction: column;
+                 margin:0 auto;
+                 max-width: 80%;
+                    p{
+                        color:$image-border;
+                        font-size:1.3rem;
+                        margin: 0 auto;
+                        text-align:left;
+                        font-weight:400;
+                    }
+                .author-cite{
+                    display: block;
+                    text-align: right;
+                    padding: 20px 0;
+                    cite{
+                        justify-content: end;
+                        color:$image-border;
+                        font-size:1.3rem;
+                    }
+                }
+             }
+         } 
+       }
+    }
+
+
+ #footer-container{
+        background-color:$contact-map-filter;
+ }
+
+ .signup-container{
+    display: flex;
+    margin-right:0 auto;
+    justify-content: space-around;
+    padding: 20px 0 0px 0;
+    @media only screen and (max-width:$phablet-size){
+    flex-direction: column;
+    padding: 16px 0 0px 0;
+    }
+}
+
+.aboutus-wrapper{
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    
+
+    .signup-text{
+        margin-top:23px;
+            h6{
+                color:$aboutus-text-color;
+                font-family:$font-lato;
+                font-size:2rem;
+                font-weight:600;
+            }
+    }
+    .form{
+        display:inline-flex;
+        margin: 0 auto;
+        @media only screen and (max-width:$phablet-size){
+            flex-direction: column;
+            display:flex;
+        }
+            input{
+                background-color:$image-border;
+                width: 300px;
+                padding: 12px;
+                border-radius: 8%;
+                margin: 0 30px 0px 33px;
+                @media only screen and (max-width:$phablet-size){
+                    width: 281px;
+                    padding: 6px;
+                    margin: 0 36px 0px 41px;
+                }
+        }
+        input[type=email]{
+            background-color:$image-border;
+            width: 300px;
+            padding: 12px;
+            border-radius: 8%;
+            margin: 0 64px 20px 0px;
+            @media only screen and (max-width:$phablet-size){
+                margin: 0px 64px 20px 33px;
+            }
+        }
+      
+        button{
+            background-color:$aboutus-button-bkg-color;
+            color:$image-border;
+            margin: 23px 21px 0px -26px;
+            width: 138px;
+            height: 48px;
+            font-size:1.5rem;
+            @media only screen and (max-width:$phablet-size){
+                font-size:1rem;
+                width:100px;
+                margin-left:auto;
+                height:40px;
+            
+            }
+        }
+    }
+}
+
+#signup-form ::-webkit-input-placeholder{
+    color:$form-text-input-color;
+    padding: 11px 0px 2px 8px;
+    font-size:1.5rem;
+    @media only screen and (max-width:$phablet-size){
+       font-size:1rem;
+    }
+}
+
