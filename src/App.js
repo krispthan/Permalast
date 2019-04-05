@@ -5,8 +5,9 @@ import Landingpage from "./components/landingpage/index";
 import Contact from "./components/contacts/index";
 import Preloader from "./components/preloader/index";
 import Aboutus from "./components/aboutus/index";
-import LandingpageFooter from './components/landingpage_footer/index';
-import NavMenu from "./components/nav/main";
+import Gallery from "./components/gallery/index";
+// import LandingpageFooter from './components/landingpage_footer/index';
+// import NavMenu from "./components/nav/main";
 
 // import {BrowserRouter, Route, Switch } from "react-router-dom";
 
@@ -24,6 +25,7 @@ class App extends Component {
         <HamburgerMenu/>
         <Landingpage/>
         <Aboutus/>
+        <Gallery/>
         <Contact/>
         {/* <NavMenu/> */}
 {/*          
