@@ -9,6 +9,7 @@ import LandingpageFooter from './components/landingpage_footer/index';
 import NavMenu from "./components/nav/main";
 
 import {BrowserRouter, Route, Switch } from "react-router-dom";
+import NewsletterModal from "./components/modal";
 
 const Routers = ()  => (
   <div>
@@ -35,8 +36,9 @@ class App extends Component {
         <NavMenu/>
         <Landingpage/>
         <LandingpageFooter />
-        <Aboutus/>
-        {/* <Gallery/> */}
+        <Aboutus/> 
+        <NewsletterModal/>
+         {/* <Gallery/> */}
         <Contact/>
         
         

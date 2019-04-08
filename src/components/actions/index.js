@@ -31,3 +31,18 @@ export const sendSignupForm = values => {
     })
   }
 }
+
+export const sendNewsLetterForm = values => {
+  const { firstName, email, phone, message} = values;
+
+  return async dispatch => {
+    const response = await axios.post('/api/newsletter_signup_form.php',{
+      firstName, email, phone, message
+    })
+    
+    dispatch({
+      type: 'SEND_NEWSLETTER_FORM',
+      payload:response
+    })
+  }
+}

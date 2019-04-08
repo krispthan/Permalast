@@ -1,0 +1,102 @@
+@import './variables';
+
+.modal-content{
+    background-color:$newsleterr-bkg-modal;
+    width: 55%;
+    border-radius: 31px;
+    
+    .modal-header{
+        display:flex;
+        flex-direction:column;
+         align-items:center;
+         .close{
+            display: flex;
+            align-self: start;
+            cursor:pointer;
+            transform: translate(3px,3px);
+            box-shadow: 1px 1px 2px black;
+         }
+        .modal-header-title{
+            h2{
+                font-size:3.5rem;
+                font-family:headerFont;
+                color:$newsletter-header-color;
+            }
+        }
+        .modal-header-subtitle{
+            h3{
+                font-size:1.5rem;
+                text-transform: uppercase;
+                 letter-spacing: 1;
+                color: $newsletter-header-color;
+            }
+        }
+        .newsletter-info{
+            padding: 16px 31px 15px;
+            text-align: left;
+            p{
+             font-size:1.2rem;
+             color:$newsletter-header-color;
+            
+            }
+        }
+        button{
+            text-transform: none;
+            margin: 0 4px;
+            border-radius: 10px;
+            padding: 0 20px;
+            color: $contact-form-col-bkg-color;
+            background-color: $form-input-bkg-color;
+        }
+    }
+    #newsletter-contact-form{
+        padding: 30px 0px 23px 0;
+        margin: 0 auto;
+        margin-top:-56px;
+        width:89%;
+       .newsletter-field-input-container{
+            input, textarea{
+                width: 100%;
+                border-radius: 20px;
+                background-color: $form-input-bkg-color;
+                text-transform: uppercase;
+                color:$newsletter-header-color;
+                padding-top: 5px;
+            }
+            input, textarea::-webkit-input-placeholder {
+                padding-left: 20px;
+                color:$newsletter-header-color;
+            }
+            input[type="text"]{
+                color:$newsletter-header-color;
+            }
+            textarea{
+                padding: 10px 10px 60px 0px;
+            }
+            p{
+                color:red;
+                font-size:1rem;
+                padding : 5px 5px;
+            }
+       }
+       .newsletter-form-buttons{
+            display: flex;
+            margin: 14px 34px 0px 0px;
+            justify-content: flex-end;
+             button{
+                padding: 3px 0px 5px 0px;
+                border-radius: 9%;
+                width: 14%;
+                cursor:pointer;
+                background-color:$newsletter-header-color;
+                color:$image-border;
+            }&:hover{
+                transform: translate(1px,3px);
+            }
+       }
+    }&.inactive{
+        display:none;
+    }
+}
+
+
