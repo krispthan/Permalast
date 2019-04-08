@@ -1,7 +1,7 @@
 import React, {Fragment} from 'react';
 import { Link } from 'react-router-dom';
 import HamburgerMenu from '../nav/index';
-
+import HomeVid from '../../assets/video/home-video.mp4';
 class Landingpage extends React.Component{
 
     renderLinks(){
@@ -31,13 +31,44 @@ class Landingpage extends React.Component{
         )
     } 
 
-      
+    constructor(props){
+        super(props)
+        this.state= {
+            activeClass : false
+        }
+    }
+    componentDidMount = () => {
+        window.addEventListener("scroll", this.animateScroll);
+    }
+    animateScroll = () => {
+        let elementTopValue = document.getElementById("landingpage-animate-wrapper").offsetTop;
+        if(window.pageYOffset >= elementTopValue + 200){
+                    this.setState(()=>({
+                       activeClass: true
+                    }));
+                 console.log(elementTopValue);   
+              }
+              else{
+                this.setState(()=>({
+                    activeClass: false
+                 }));
+              }
+    }
     render(){
     
-        // const links = this.renderLinks();
+
+        
+        const landingpageWrapper = "landingpage-wrapper";
+        const activeStatus = " inactive";
         return(
-            <div className="landingpage-wrapper" id="landingpage-animate-wrapper">
+            <div id="landingpage-animate-wrapper" className={this.state.activeClass ? landingpageWrapper : ( `${activeStatus}  ${landingpageWrapper}`)}>
                  <div className="landingpage-container">
+                 <video autoPlay loop muted poster="images/videoFiller1080.jpg" className="backgroundVideo">
+                    <source src={HomeVid} type="video/mp4" />
+                </video>
+                <div className="home-page-houses">
+                
+                </div>
                     <div className="landingpage-filter"></div>
                         <HamburgerMenu/>
                         <header className="nav-text-container">
@@ -54,15 +85,15 @@ class Landingpage extends React.Component{
                           </div>
                   <hr/>
                   <div className="permalast-title">
-                      <h1>Perma <span>[</span>last<span>]</span></h1>
+                      <h1>Perma<span>[</span>last<span>]</span></h1>
                   </div>
                   <hr/>
-                  <div className="permalast-subheader">
-                      <h3>A Storm is coming. Is your roof read?</h3>
-                  </div>
+                
                 </header>
             </div>
-           
+            <div className="permalast-subheader">
+                      <h3>A Storm is coming. Is your roof ready?</h3>
+                  </div>
         </div>
           )
        }   
