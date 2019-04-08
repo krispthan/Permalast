@@ -21,16 +21,20 @@
         transition:all 0.75s 1.2s;
         @media only screen and (max-width: $phablet-size) {
             flex-direction: column;
-            padding: 16px 0 0px 0;
+            padding: 16px 0 12px 0;
         }
     }
     .signup-text {
         margin-top: 23px;
+        text-align: center;
         h6 {
             color: $aboutus-text-color;
             font-family: $font-lato;
-            font-size: 2rem;
-            font-weight: 600;
+            font-size:1.5rem;
+            // font-weight: 400;
+            @media only screen and (max-width:$phablet-size){
+                font-size:1.3rem;
+            }
         }
     }
 
@@ -53,8 +57,8 @@
         }
         input {
             background-color: $image-border;
-            width: 300px;
-            padding: 12px;
+        
+            padding: 6px;
             border-radius: 8%;
             margin: 0 30px 0px 33px;
 
@@ -67,13 +71,11 @@
 
         input[type=email] {
             background-color: $image-border;
-            width: 300px;
-            padding: 12px;
+            padding: 8px;
             border-radius: 8%;
             margin: 0 64px 20px 0px;
-
             @media only screen and (max-width: $phablet-size) {
-                margin: 0px 64px 20px 33px;
+                margin: 0px 64px 20px 41px;
             }
         }
 
@@ -81,16 +83,22 @@
             background-color: $aboutus-button-bkg-color;
             color: $image-border;
             margin: 23px 21px 0px -26px;
-            width: 138px;
-            height: 48px;
-            font-size: 1.5rem;
 
-            @media only screen and (max-width: $phablet-size) {
+            width: 138px;
+            height: 39px;
+            font-size: 1.5rem;
+            @media only screen and (max-width: $laptop-size) {
                 font-size: 1rem;
-                width: 100px;
+                width: 90px;
+                margin-left: auto;
+                margin: 23px 21px 0px -26px;
+            }
+            @media only screen and (max-width: $phablet-size) {
+                font-size: 0.8rem;
+                width: 80px;
                 margin-left: auto;
                 height: 40px;
-
+                margin-top: -20px;
             }
         }
         
@@ -127,6 +135,12 @@
                 font-family: headerFont;
                 color: $image-border;
                 font-size: 3.5rem;
+                @media only screen and (max-width:$laptop-size){
+                    font-size:2.3rem;
+                }
+                @media only screen and (max-width:$phablet-size){
+                    font-size:2rem;
+                }
             }
         }
 
@@ -140,12 +154,19 @@
 
             p {
                 color: $image-border;
-                font-size: 1.3rem;
+                font-size: 1.2rem;
                 margin: 0 auto;
                 text-align: left;
                 font-weight: 400;
                 transition: all 0.25s 0.75s;
                 opacity: 1;
+                font-family:$font-lato;
+                @media only screen and (max-width:$laptop-size){
+                    font-size:1.2rem;
+                }
+                @media only screen and (max-width:$phablet-size){
+                    font-size:1rem;
+                }
               
             }
 
@@ -161,6 +182,13 @@
                     font-size: 1.3rem; 
                     transition: all 0.5s 1s;
                     opacity: 1; 
+                    font-family:$font-lato;
+                    @media only screen and (max-width:$laptop-size){
+                        font-size:1.2rem;
+                    }
+                    @media only screen and (max-width:$phablet-size){
+                        font-size:0.8rem;
+                    }
                 }
             }
         }

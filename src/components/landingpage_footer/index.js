@@ -29,7 +29,7 @@ class LandingpageFooter extends React.Component {
         return(
             <div className={this.state.activeClass ? landingpageFooterWrapper : ( `${activeStatus}  ${landingpageFooterWrapper}`)}>
                 <div className="protect-header">
-                    <h3>Protect your roof. Protect your property. Protect your budget</h3>
+                    <h4>Protect your roof. Protect your property. Protect your budget</h4>
                 </div>
                 <div className="progress-bar-savings">
                     <div className="savings-container">

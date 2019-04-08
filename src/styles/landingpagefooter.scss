@@ -4,6 +4,7 @@
     padding: 20px;
     padding-bottom: 45px;
     background: $landingpage-footer-bkg-color;
+    position:relative;
 
     .protect-header {
         text-align: center;
@@ -11,13 +12,17 @@
         padding: 10px 0 25px;
         opacity: 1;
         transition: all 0.5s;
-
+            h4{ 
+                font-size:2rem;
+            }
             h3 {
                 font-size: 1.5rem;
                 padding-top: 10px;
                 @extend %font-transform-color;
-
-                @media only screen and (max-width: phablet-size) {
+                @media only screen and (max-width: $laptop-size) {
+                    font-size: 1.5rem;
+                }
+                @media only screen and (max-width: $phablet-size) {
                     font-size: 1rem;
                 }
             }
@@ -103,6 +108,9 @@
         opacity:1;
         transition:all 0.5s;
 
+        @media only screen and (min-width: 1500px) {
+            margin: 0px 0px 22px 30px;
+        }
         @media only screen and (max-width: 1500px) {
             margin: 0px 0px 22px 0px;
         }
@@ -116,7 +124,7 @@
         }
 
         h3 {
-            font-size: 1.75rem;
+            font-size: 1.5rem;
 
             @media only screen and (max-width: 1500px) {
                 font-size: 1.5rem;

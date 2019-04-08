@@ -6,6 +6,7 @@
             justify-content: space-between;
             color:$image-border;
             font-size:1.5rem;
+            text-align:center;
             @extend %text-style;
             padding: 30px 43px 35px 44px;
             opacity: 1;
@@ -19,16 +20,27 @@
                 margin:-14px;
                 opacity:1;
                 transition: all 0.75s;
+                font-size:1.5rem;
+                width:100%;
+                @media only screen and (max-width:1500px){
+                    font-size:1rem;   
+                }  
+                @media only screen and (max-width:$laptop-size){
+                    font-size:1rem;   
+                }  
+                @media only screen and (max-width:$phablet-size){
+                    font-size:0.8rem;   
+                }  
             }&:first-of-type{
                 @media only screen and (max-width:$phablet-size){
                     font-size:0.8rem;
-                    margin-left:13px;
+                
                 }  
             }& .fas{
                 padding-right:15px;
                 font-size:2rem;
                 @media only screen and (max-width:$phablet-size){
-                    font-size:1rem;
+                    font-size:0.8rem;
                     display:flex;
                     flex-direction:column;
                 }

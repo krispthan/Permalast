@@ -32,7 +32,7 @@ class Contact extends React.Component{
           
     }
     animateScroll = (e) => {
-        let elementTopValue = document.getElementById("about-us-message-container").offsetTop;
+        let elementTopValue = document.getElementById("contacts-animate-wrapper").offsetTop;
         if(window.pageYOffset >= elementTopValue -500){
                     this.setState(()=>({
                        activeClass: true
@@ -51,7 +51,7 @@ class Contact extends React.Component{
                     <div className="col-lg-6 contact-us-left-container">
                     <div className="contact-us-left-filter"></div>
                     <div className="contact-info-wrapper">
-                            <div className="row">
+                     
                                 <div className="contact-icon-container d-flex justify-container-space-around">
                                     <div className="col-lg-4   contact-img-icon-container">
                                         <img src={ twitter } alt=""/> 
@@ -63,7 +63,7 @@ class Contact extends React.Component{
                                     <img src={ youtube } alt=""/>
                                     </div>
                                 </div>
-                            </div>
+                          
                         <hr/>
                         <div className="row">
                             <div className="contact-us-display">
