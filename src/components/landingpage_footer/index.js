@@ -5,9 +5,29 @@ import piggybank from '../../assets/images/piggy-bank-icon.png';
 import checkmark from '../../assets/images/guarantee-check-mark-icon.png';
 
 class LandingpageFooter extends React.Component {
+    constructor(props){
+        super(props)
+        this.state= {
+            activeClass : false
+        }
+    }
+    componentDidMount = () => {
+        window.addEventListener("scroll", this.animateScroll);
+    }
+    animateScroll = () => {
+        let elementTopValue = document.getElementById("landingpage-animate-wrapper").offsetTop;
+        if(window.pageYOffset >= elementTopValue + 500){
+                    this.setState(()=>({
+                       activeClass: true
+                    }));
+                 console.log(elementTopValue);   
+              }
+    }
     render(){
+        const landingpageFooterWrapper = "landingpage-footer-wrapper";
+        const activeStatus = " inactive";
         return(
-            <div className="footer-wrapper">
+            <div className={this.state.activeClass ? landingpageFooterWrapper : ( `${activeStatus}  ${landingpageFooterWrapper}`)}>
                 <div className="protect-header">
                     <h3>Protect your roof. Protect your property. Protect your budget</h3>
                 </div>

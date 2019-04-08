@@ -1,7 +1,9 @@
 import React, {Fragment} from 'react';
 import { Link } from 'react-router-dom';
+import HamburgerMenu from '../nav/index';
 
 class Landingpage extends React.Component{
+
     renderLinks(){
         return (
             <Fragment>
@@ -31,11 +33,13 @@ class Landingpage extends React.Component{
 
       
     render(){
+    
         // const links = this.renderLinks();
         return(
-            <div className="landingpage-wrapper">
+            <div className="landingpage-wrapper" id="landingpage-animate-wrapper">
                  <div className="landingpage-container">
                     <div className="landingpage-filter"></div>
+                        <HamburgerMenu/>
                         <header className="nav-text-container">
                             <div className="nav-text">
                                 <ul>

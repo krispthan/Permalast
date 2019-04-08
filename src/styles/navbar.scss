@@ -1,10 +1,16 @@
 @import './variables';
 
 .Navbar-menu-wrapper{
+    position: fixed;
+    top:0;
+    transition: all 0.5s;
+    width:100%;
+    z-index: 100000;
     .navbrand-icon-container{
         display: inline-flex;
         margin-top: 0px;
-      
+        opacity: 1;
+        transition:$transition;
             #navbrand-icon{
                 filter: invert(100%);
             }
@@ -15,14 +21,40 @@
         list-style-type: none;
         margin-left: auto;
         font-size: 1.2rem;
-    }      
+        padding: 14px 39px 11px 45px;
+            a{
+                color: whitesmoke;
+                text-decoration: none;
+                padding: 10px 10px 0px 30px;
+                background-color: transparent;
+                opacity: 1;
+                transition: $transition 0.25s;
+                transform:$transform;
+                &:hover{
+                    color:$form-input-bkg-color;
+                }
+            a:first-of-type{
+                opacity: 1;
+                transition: all 0.5s 0.75;
+                transform: $transform;
+             }
+        }
+    } 
+    &.inactive{
+       opacity:0;
+       transform:translate(-100px,0);
+       .a{
+           opacity: 0;
+           transform: translate(-25px, 0);
+       }
+       .a:first-of-type{
+           opacity:0;
+           transform: translate(0,-25px);
+       }
+       .navbrand-icon-container{
+           opacity:0;
+           transform: rotate(30deg);
+       }
+    }     
 }
 
-a {
-    color: whitesmoke;
-    text-decoration: none;
-    background-color: transparent;
-}
-a:hover{
-    color:antiquewhite;
-}

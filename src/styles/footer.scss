@@ -1,43 +1,54 @@
 
 
 .contact-icon-wrapper{
-
-
         .contact-icon-container{
             display:flex;
             justify-content: space-between;
             color:$image-border;
             font-size:1.5rem;
             @extend %text-style;
-            padding: 15px;
+            padding: 30px 43px 35px 44px;
+            opacity: 1;
+            transition:all 0.5s;
             background-color:$contact-icon-col-bkg-color;
             @media only screen and (max-width:$phablet-size){
                 font-size:1rem;
             }
-        }
+            a{
+                color:$image-border;
+                margin:-14px;
+                opacity:1;
+                transition: all 0.75s;
+            }&:first-of-type{
+                @media only screen and (max-width:$phablet-size){
+                    font-size:0.8rem;
+                    margin-left:13px;
+                }  
+            }& .fas{
+                padding-right:15px;
+                font-size:2rem;
+                @media only screen and (max-width:$phablet-size){
+                    font-size:1rem;
+                    display:flex;
+                    flex-direction:column;
+                }
+            } &:nth-child(1){
+                transition-delay:0.2s;
+            } 
+            &:nth-child(2){
+                transition-delay:0.4s;
+            }   
+            &:nth-child(3){
+                transition-delay:0.6s;
+            }  
+        }&.inactive{
+            .contact-icon-container{
+                a{
+                    transform: translateX(-50%);
+                    opacity:0;
+                }
+            }
+        }  
 }
 
-.contact-icon-container a{
-    color:$image-border;
-}
 
-a:first-of-type{
-    margin-left: 25px;
-    @media only screen and (max-width:$phablet-size){
-        font-size:0.8rem;
-        margin-left:13px;
-    }
-}
-
-a:last-of-type{
-    margin-right: 30px;
-}
-a .fas{
-    padding-right:15px;
-    font-size:2rem;
-    @media only screen and (max-width:$phablet-size){
-        font-size:1rem;
-        display:flex;
-        flex-direction:column;
-    }
-}

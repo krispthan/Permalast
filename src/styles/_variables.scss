@@ -23,7 +23,8 @@ $tablet-size:992px;
 $phablet-size:768px;
 $phone-size:350px;
 
-
+$transition: transition all 0.5s;
+$transform:translate(0,0);
 
 %font-transform-color{
     text-transform:uppercase;

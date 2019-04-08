@@ -17,7 +17,8 @@ class Contact extends React.Component{
     constructor(props){
         super(props)
         this.state = {
-            messageSent :  false
+            messageSent :  false,
+            activeClass: false
         }
     }
     submitHandler = (values) => {
@@ -26,10 +27,25 @@ class Contact extends React.Component{
           })));
         return values;
       }
+      componentDidMount = () => {
+        window.addEventListener("scroll", this.animateScroll);
+          
+    }
+    animateScroll = (e) => {
+        let elementTopValue = document.getElementById("about-us-message-container").offsetTop;
+        if(window.pageYOffset >= elementTopValue -500){
+                    this.setState(()=>({
+                       activeClass: true
+                    }));
+                 console.log(elementTopValue);   
+              }
+    }
     render(){
-        const { handleSubmit, pristine, reset, submitting } = this.props
+        const { handleSubmit, pristine, reset, submitting } = this.props;
+        const contactsWrapper = "contacts-wrapper";
+        const activeStatus= "inactive"
         return(
-            <div className="contacts-wrapper">
+            <div className={this.state.activeClass ? contactsWrapper : (`${activeStatus} ${contactsWrapper}`)} id="contacts-animate-wrapper">
                 <div className="left-right-col-container">
                 <div className="row">
                     <div className="col-lg-6 contact-us-left-container">
@@ -67,7 +83,7 @@ class Contact extends React.Component{
                             <h3>Help us Help you</h3>
                         </div>
                         <form  id="contact-form" onSubmit={handleSubmit}>
-                            <div class="field-input-container">
+                            <div className="field-input-container">
                                 <Field
                                     name="firstName"
                                     component="input"
@@ -76,7 +92,7 @@ class Contact extends React.Component{
                                     validate={ required }
                                     component={ Input }/>
                                 </div>
-                                <div class="field-input-container">
+                                <div className="field-input-container">
                                 <Field
                                     name="lastName"
                                     component="input"
@@ -85,7 +101,7 @@ class Contact extends React.Component{
                                     validate={ required }
                                     component={ Input }/>
                                 </div>
-                            <div class="field-input-container">
+                            <div className="field-input-container">
                                 <Field
                                     name="email"
                                     component="input"
@@ -94,7 +110,7 @@ class Contact extends React.Component{
                                     validate={ required }
                                     component={ Input }/>
                                 </div>
-                            <div class="field-input-container">
+                            <div className="field-input-container">
                                 <Field
                                     name="company"
                                     component="input"
@@ -102,7 +118,7 @@ class Contact extends React.Component{
                                     placeholder="Company"
                                     component={ Input }/>
                                 </div>
-                            <div class="field-input-container">
+                            <div className="field-input-container">
                                     <Field name="notes"
                                     placeholder="Comments" 
                                     component="textarea"/>
