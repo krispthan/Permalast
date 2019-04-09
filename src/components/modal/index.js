@@ -15,28 +15,31 @@ class NewsLetterContact extends React.Component{
             showModal: false
         }
     }
+    componentDidMount =() => {
+        setTimeout(()=>{
+            this.toggleModal();
+        },20000);
+    }
     submitHandler = (values) => {
         this.props.sendContactForm(values).then(() => this.setState(() => ({
             messageSent: true
           })));
         return values;
       }
-      displayModal = () => {
-        this.setState({showModal: true});
-      }
-      hideModal = () => {
-          this.setState({showModal: false});
-      }
+    toggleModal=()=>{
+        this.setState({showModal: !this.state.showModal })
+    }
     render(){
         const { handleSubmit, pristine, reset, submitting } = this.props;
-        const modalContent = "modal-content";
-        const activeStatus = "inactive"
+        const modalContent = "newsletter-wrapper";
+        const activeStatus = "inactive";
       
         return(
-            <div>
-             <div className={this.state.showModal ? modalContent :(`${modalContent} ${activeStatus}`)}>
+
+            <div className={this.state.showModal ? modalContent :(`${modalContent} ${activeStatus}`)}>
+             <div className="modal-content">
                 <div className="modal-header">
-                <button onClick={this.hideModal} type="button" class="close" data-dismiss="modal">&times;</button>
+                <button onClick={this.toggleModal} type="button" class="close" data-dismiss="modal">&times;</button>
                     <div className="modal-header-title">
                         <h2>PermaLast Newsletter</h2>
                     </div>

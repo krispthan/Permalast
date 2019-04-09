@@ -1,0 +1,118 @@
+@import './variables';
+@import './animations.scss';
+
+.preloader-wrapper{
+    position:fixed;
+    top : 0;
+    left:0;
+    width:100%;
+    height:100vh;
+    background-color:$aboutus-wrapper-bkg-color;
+    z-index:100000000;
+    transition:all 0.3s;
+    transform: translate(0,0);
+
+    
+    .preloader-container{
+        height: 90vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .preloader-content-container{
+                position:relative;
+                transform:scale(1);
+                transition:all 20s;
+
+            hr{
+                position:absolute;
+                width:100%;
+                border: 3px solid $aboutus-text-color;
+                opacity:1;
+                transition:all 0.5s;
+                &:nth-child(1){
+                    &:before{
+                        content:"";
+                        display:block;
+                        position:absolute;
+                        width:100%;
+                        background:whitesmoke;
+                        height:3px;
+                        animation:hr-top-pulse 0.7s infinite;
+                        
+                    }
+                }
+                &:last-of-type{
+                     &:after{
+                        content:"";
+                        display:block;
+                        position:absolute;
+                        width:100%;
+                        background:whitesmoke;
+                        height:3px;
+                        animation:hr-bottom-pulse 0.7s infinite;
+                    }
+                }
+            }
+        }
+        .preloader-title{
+            margin: 19px 5px -5px 5px;
+            text-align:center;
+            transition: all 0.5s;
+            opacity:1;
+            height:auto;
+            #perma{
+                font-family:headerFont;
+                color:$landingpage-footer-bkg-color;
+                text-transform:uppercase;
+                font-size:4rem;
+                    span{
+                    font-family:$font-lato;
+                    color:$landingpage-footer-bkg-color;
+                    font-weight:600;
+                    font-size:6rem;
+                    text-transform:uppercase;
+                  }
+            }
+        }
+        .loading-text{
+            text-align:center;
+            margin-top: 49px;
+            animation: fade 1s infinite;
+            transition : all 0.5s;
+            h6{
+                text-transform:uppercase;
+                color:$landingpage-footer-bkg-color;
+                font-size:1rem;
+            }
+        }
+    } 
+    &.preloader-default{
+        .loading-text{
+            opacity:0;
+            animation:none;
+        }
+        .preloader-title{
+            height: 0px;
+            margin: 0;
+            opacity: 0;
+        }
+      
+    }
+    &.intro-state{
+        .preloader-container{
+            .preloader-content-container{
+                transform:scale(1.1);
+
+                hr{
+                    opacity:0;
+                    width:0%;
+                }
+
+            }
+        }     
+    }
+    &.outro-state{
+        transform:translate(100%,0);
+    } 
+ }
+

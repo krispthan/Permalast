@@ -10,6 +10,7 @@
     .left-right-col-container {
         opacity: 1;
         background-image: url('../assets//images//contact_bkg.png');
+        background-attachment: fixed;
 
         .contact-us-left-container {
             position: relative;
@@ -34,7 +35,7 @@
             display: flex;
             align-items: center;
             flex-direction: column;
-            background-color: $contact-form-col-bkg-color;
+            background-color:$contact-bkg-transparent-color;
 
             .subheader-container {
                 text-align: center;
@@ -190,7 +191,7 @@
         position: relative;
         width: 100%;
         background-image: url('../assets/images/map.png');
-
+        background-attachment: fixed;
         .contact-map-filter {
             position: absolute;
             height: 100%;

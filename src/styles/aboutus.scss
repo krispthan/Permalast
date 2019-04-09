@@ -83,7 +83,6 @@
             background-color: $aboutus-button-bkg-color;
             color: $image-border;
             margin: 23px 21px 0px -26px;
-
             width: 138px;
             height: 39px;
             font-size: 1.5rem;
@@ -95,7 +94,8 @@
             }
             @media only screen and (max-width: $phablet-size) {
                 font-size: 0.8rem;
-                width: 80px;
+                width: 65px;
+                border-radius: 10px;
                 margin-left: auto;
                 height: 40px;
                 margin-top: -20px;
@@ -123,6 +123,9 @@
             opacity: .9;
             position: relative;
             margin: 82px 27% 75px 25%;
+            @media only screen and (max-width: 800px){
+                margin: 82px 5% 75px 5%;
+            }
         }
 
         .aboutus-header {

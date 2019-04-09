@@ -1,0 +1,48 @@
+//preloader animation
+  
+@keyframes fade {
+    0% {
+        opacity:1;
+    }
+    50% {
+        opacity:.5;
+    }
+    100% {
+        opacity:1;
+        }
+    }
+
+    @keyframes hr-top-pulse {
+        0%{
+            opacity:1;
+            transform: translate(0,0);
+ 
+        }
+        90%{
+            opacity:0;
+            transform: translate(0,-150px);
+ 
+        } 
+        100%{
+            opacity:0;
+            transform: translate(0,0); 
+        }
+      
+    }
+    @keyframes hr-bottom-pulse {
+        0%{
+            opacity:1;
+            transform: translate(0,0);
+ 
+        }
+        90%{
+            opacity:0;
+            transform: translate(0,150px);
+ 
+        } 
+        100%{
+            opacity:0;
+            transform: translate(0,0); 
+        }
+      
+    }

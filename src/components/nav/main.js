@@ -60,13 +60,10 @@ class NavMenu extends React.Component{
         return(
             <Fragment>
             <div className={this.state.activeClass ? navbarMenuWrapper : (`${navbarActiveStatus}  ${navbarMenuWrapper}`) }>
-                <Navbar bg="dark" expand="lg" float="right">
+                <Navbar  className="Navbar-menu" expand="lg" float="right">
                     <div className="navbrand-icon-container">
                         <img  id="navbrand-icon" src={ Permalast } alt=""/>
                     </div>
-                    <Link  data-target="sidenav" className = "sidenav-trigger" to="#">
-                    <i class="fa fa-bars" aria-hidden="true"></i>
-                     </Link>
                    <ul className="main-link-navbar">
                          {links }
                    </ul>

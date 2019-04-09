@@ -16,7 +16,7 @@ class LandingpageFooter extends React.Component {
     }
     animateScroll = () => {
         let elementTopValue = document.getElementById("landingpage-animate-wrapper").offsetTop;
-        if(window.pageYOffset >= elementTopValue + 500){
+        if(window.pageYOffset >= elementTopValue + 300){
                     this.setState(()=>({
                        activeClass: true
                     }));
