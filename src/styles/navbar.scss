@@ -6,6 +6,9 @@
     transition: all 0.5s;
     width:100%;
     z-index: 100000;
+    .navbar-menu{
+        background-color:$contact-map-filter;
+    }
     .navbrand-icon-container{
         display: inline-flex;
         margin-top: 0px;

@@ -61,7 +61,7 @@ class Landingpage extends React.Component{
         const landingpageWrapper = "landingpage-wrapper";
         const activeStatus = " inactive";
         return(
-            <div id="landingpage-animate-wrapper" className={this.state.activeClass ? landingpageWrapper : ( `${activeStatus}  ${landingpageWrapper}`)}>
+            <div id="landingpage-animate-wrapper" className={this.state.activeClass ? landingpageWrapper : ( `${activeStatus}  ${landingpageWrapper}`)} >
                  <div className="landingpage-container">
                  <video autoPlay loop muted poster="images/videoFiller1080.jpg" className="backgroundVideo">
                     <source src={HomeVid} type="video/mp4" />
